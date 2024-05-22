@@ -5,5 +5,5 @@ const OMIKUJI_ARY = ["絶頂", "大吉", "吉", "中吉", "小吉", "末吉", "�
     BUTTON.addEventListener('click', () => {
         let random = Math.trunc(Math.random()*9);
         console.log(random);
-        alert.log(OMIKUJI_ARY[random]);
+        alert(OMIKUJI_ARY[random]);
     });
