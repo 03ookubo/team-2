@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>出身校紹介ページ</title>
-    <link rel="stylesheet">
-
-    <style>
-    
+    <link rel="stylesheet"  >
+ 
+    <style>   
         .box1{
             padding: 0.2em 0.5em;
             margin: 2em 2em;
@@ -34,7 +33,32 @@
             margin: 0; 
             padding: 0;
         }
-    </style>
+
+
+        .nav ul{
+            margin: 30px 0 0 0;
+            padding: 0;
+            list-style-type: none;
+
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        .nav a:link{
+            color: #253958;
+        }
+        .nav a:visited{
+            color: #253958;
+        }
+        .nav a:hover{
+            text-decoration: none;
+        }
+        .nav a:active{
+            text-decoration: none;
+        }
+    </style> 
+
+
 </head>
 <body>
     <!--ヘッダー-->
@@ -44,7 +68,17 @@
     <!--ヘッダーここまで-->
     <!--メイン-->
     <main class="box1">
+        <nav class="nav">
+            <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="school_higashiokayamaHighSchool.html">大久保</a></li>
+            <li><a href="school_sojaHighschool.html">渡邊</a></li>
+            <li><a href=".html">牧野</a></li>
+            <li><a href="school_kasasyouHighSchool.html">坂本</a></li>
+            </ul>
+        </nav>
         <h1>大久保さんの出身校紹介ページ(作成者:牧野)</h1>
+        
         <img class="img" src="images/higashiokayama.jpg" alt="higashiokayama" align="right">
         <div class="box2">
             <p>学校名：岡山県立東岡山工業高校</p>
@@ -55,19 +89,17 @@
         <div class="box2">
             <p>所属していた学科：電気科</p>
         </div>
-        <nav>
-            <ul>
-            <li><a href="index.html">HOME</a></li>
-            <li><a href="makino.html">大久保</a></li>
-            <li><a href="school_sojaHighschool.html">渡邊</a></li>
-            <li><a href=".html">牧野</a></li>
-            <li><a href="ookubo.html">坂本</a></li>
-            </ul>
-        </nav>
+        <div class="box2">
+            <p>所属していた学科：電気科</p>
+        </div>
+        <div class="box2">
+            <p>班員のコメント：</p>
+        </div>
     </main>
     <!--メインここまで-->
     <!--フッター-->
     <footer>
+        
     </footer>
     <!--フッターここまで-->
 </body>
