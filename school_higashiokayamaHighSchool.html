@@ -6,7 +6,12 @@
     <title>出身校紹介ページ</title>
     <link rel="stylesheet"  >
  
-    <style>   
+    <style>
+        .div{
+            width: 960;
+            margin: 0 auto;
+        }
+        /*背景*/
         .box1{
             padding: 0.2em 0.5em;
             margin: 2em 2em;
@@ -20,29 +25,30 @@
             margin: 0; 
             padding: 0;
         }
-
+        /*写真*/
         .img {
-            width: 40%;
+            width: 15em;
+            object-fit: cover;
+            
         }
-
+        
         .box2{
-        padding: 0.5em 1em;
-        margin: 1em 0;
+            padding: 0.5em 1em;
+            margin: 1em 0;
         }
         .box2 p {
             margin: 0; 
             padding: 0;
         }
 
-
+        /*ナビ*/
         .nav ul{
-            margin: 30px 0 0 0;
             padding: 0;
             list-style-type: none;
-
             display: flex;
             justify-content: center;
-            gap: 40px;
+            gap: 50px;
+            width: auto;
         }
         .nav a:link{
             color: #253958;
@@ -56,10 +62,34 @@
         .nav a:active{
             text-decoration: none;
         }
-    </style> 
-
-
+        /*時計*/
+        .clock{
+            color: #daf6ff;
+            text-shadow: 0 0 20px #0e25f2;
+            font-size: 50px;
+            text-align: center; 
+        }
+    </style>
+    <script>
+        function set2fig(num) {
+            // 2桁に調整
+            var ret;
+            if( num < 10 ) { ret = "0" + num; }
+            else { ret = num; }
+            return ret;
+        }
+        function showClock2() {
+            var nowTime = new Date();
+            var nowHour = set2fig( nowTime.getHours() );
+            var nowMin  = set2fig( nowTime.getMinutes() );
+            var nowSec  = set2fig( nowTime.getSeconds() );
+            var msg = nowHour + ":" + nowMin + ":" + nowSec;
+            document.getElementById("RealtimeClockArea2").innerHTML = msg;
+        }
+        setInterval('showClock2()',1000);
+    </script> 
 </head>
+
 <body>
     <!--ヘッダー-->
     <header>
@@ -68,18 +98,19 @@
     <!--ヘッダーここまで-->
     <!--メイン-->
     <main class="box1">
+        <p class="clock" id="RealtimeClockArea2"></p>
         <nav class="nav">
             <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="school_higashiokayamaHighSchool.html">大久保</a></li>
             <li><a href="school_sojaHighschool.html">渡邊</a></li>
-            <li><a href=".html">牧野</a></li>
+            <li><a href="school_minamihighschool.html">牧野</a></li>
             <li><a href="school_kasasyouHighSchool.html">坂本</a></li>
             </ul>
         </nav>
-        <h1>大久保さんの出身校紹介ページ(作成者:牧野)</h1>
-        
-        <img class="img" src="images/higashiokayama.jpg" alt="higashiokayama" align="right">
+        <div class="div">
+        <h2>大久保さんの出身校紹介ページ(作成者:牧野)</h2>
+        <div class="im"><img class="img" src="images/higashiokayama.jpg" alt="higashiokayama" align="right"></div>
         <div class="box2">
             <p>学校名：岡山県立東岡山工業高校</p>
         </div>
@@ -89,11 +120,16 @@
         <div class="box2">
             <p>所属していた学科：電気科</p>
         </div>
+        <h2>班員のコメント</h2>
         <div class="box2">
-            <p>所属していた学科：電気科</p>
+            <p>大久保:</p>
         </div>
         <div class="box2">
-            <p>班員のコメント：</p>
+            <p>坂本:</p>
+        </div>
+        <div class="box2">
+            <p>牧野:</p>
+        </div>
         </div>
     </main>
     <!--メインここまで-->
