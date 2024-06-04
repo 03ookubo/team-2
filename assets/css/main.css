@@ -206,39 +206,6 @@ ul.icon img:hover {
 	flex-wrap: wrap;	/*折り返す指定*/
 }
 
-/*日付(dt)、記事(dd)共通設定*/
-#new dt,
-#new dd {
-	border-bottom: 1px solid #dfd4b7;	/*下線の幅、線種、色。*/
-	padding: 5px 0;					/*上下、左右へのボックス内の余白*/
-}
-
-/*日付(dt)設定*/
-#new dt {
-	width: 8em;	/*幅。8文字(em)分。*/
-}
-
-/*記事(dd)設定*/
-#new dd {
-	width: calc(100% - 8em);	/*「8em」は上の「#new dt」のwidthの値です。*/
-}
-
-/*service.htmlの各ボックス
----------------------------------------------------------------------------*/
-.list {
-	overflow: hidden;
-	border: 1px solid #dfd4b7;	/*枠線の幅、線種、色*/
-	border-radius: 5px;		/*角丸のサイズ。直角がいいならこの１行を削除。*/
-	padding: 20px;			/*ボックス内の余白*/
-	margin-bottom: 20px;	/*ボックス同士（上下間）に空けるスペース*/
-    background: rgba(255,255,255,0.2);	/*背景色。255,255,255は白のことで0.2は色が20%出た状態。*/
-}
-
-/*list内のh4見出し*/
-.list h4 {
-    font-size: 1.2rem;    /*文字サイズ。remの単位についてはテンプレート内の解説をお読み下さい。*/
-}
-
 /*スライドショー（slickを使用）
 ---------------------------------------------------------------------------*/
 
@@ -335,20 +302,6 @@ ul.icon img:hover {
 	padding: 0 20px;	/*上下、左右へのテキスト内にとる余白。*/
 }
 
-/*service.htmlの各ボックス
----------------------------------------------------------------------------*/
-.list {
-	margin-bottom: 40px;	/*ボックス同士（上下間）に空けるスペース*/
-}
-
-/*画像の設定（listブロック内にある１つ目の画像が対象）*/
-.list img:first-of-type {
-	width: 30%;			/*画像の幅*/
-	float: left;		/*画像を左に回り込みさせる*/
-	margin-right: 20px;	/*画像と、右側のテキストとの間に空けるスペース*/
-}
-
-/*　※注意！　下の閉じカッコ　}　は600px以上の設定に必要なので、うっかり削除しないように。　*/
 
 }
 
@@ -414,3 +367,17 @@ main {
 /*　※注意！　下の閉じカッコ　}　は800px以上の設定に必要なので、うっかり削除しないように。　*/
 
 }
+/*ボタンの設定*/
+.button{
+    color: #9b8d69;
+	background-color: rgba(155,141,105,0.4);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+	border-bottom: 5px solid #9b8d69;
+}.button:hover {
+	margin-top: 3px;
+	color: #9b8d69;
+	background: rgba(155,141,105,0.4);
+	border-bottom: 2px solid #9b8d69;
+  }
