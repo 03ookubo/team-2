@@ -1,99 +1,146 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<title>渡邊の出身高校紹介</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="渡邊の出身高校">
-<link rel="stylesheet" href="assets/css/main.css">
+    <meta charset="UTF-8">
+    <title>渡邊の出身高校紹介</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="渡邊の出身高校">
+    <link rel="stylesheet" href="assets/css/main.css">
+
+    <!--個別スタイルの指定-->
+    <style>
+        .btn {
+            font-size: 1rem;
+            width: 12rem;
+            height: 2.5rem; 
+        }
+
+        .btn--orange {
+            color: #fff;
+            background-color: #ffb86c;
+        }
+
+        .btn--orange:hover {
+            color: #fff;
+            background: #ffb86c;
+        }
+
+        .btn--radius {
+            border-radius: 100vh;
+        }
+
+        .dialog-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dialog {
+            background-color: white;
+            border: 1px solid black;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 
 <body>
 
-<div id="container">
+    <div id="container">
 
-<header>
-<h1 id="logo"><a href="index.html">渡邊の出身高校紹介(作成者：坂本)</a></h1>
-</header>
+        <header>
+            <h1 id="logo"><a href="index.html">渡邊の出身高校紹介(作成者：坂本)</a></h1>
+        </header>
 
-<!--メインメニュー-->
-<nav id="menubar">
-<ul>
-<li><a href="index.html">HOME</a></li>
-<li><a href="school_ookubo.html">大久保</a></li>
-<li><a href="service.html">渡邊</a></li>
-<li><a href="contact.html">牧野</a></li>
-<li><a href="school_sojaHighschool.html">総社高校</a></li>
-</ul>
-</nav>
+        <!--メインメニュー-->
+        <nav id="menubar">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="school_higashiokayamaHighSchool.html">大久保</a></li>
+                <li><a href="school_sojaHighschool.html">渡邊</a></li>
+                <li><a href="school_minamihighschool.html">牧野</a></li>
+                <li><a href="school_kasasyouHighSchool.html">坂本</a></li>
+            </ul>
+        </nav>
 
-<main>
+        <!--mainここから-->
+        <main>
+            <section>
+                <h2>高校紹介</h2>
 
-<section>
+                <table class="ta1">
+                    <caption>岡山県立総社高等学校</caption>
+                    <tr>
+                        <th>ホームページ</th>
+                        <td><a href="https://www.soja.okayama-c.ed.jp/" target="_blank">岡山県立総社高等学校ホームページ</a></td>
+                    </tr>
+                    <tr>
+                        <th>画像</th>
+                        <td>
+                            <img src="images/sojaHighSchool.jpg" width="800" height="450" frameborder="0" style="border:0" allowfullscreen>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>所在</th>
+                        <td>〒719-1126 岡山県総社市総社3-9-1</td>
+                    </tr>
+                    <tr>
+                        <th>電話番号</th>
+                        <td>(0866)93-0891</td>
+                    </tr>
+                </table>
 
-<h2>高校紹介</h2>
+            </section>
 
-<table class="ta1">
-<caption>岡山県立総社高等学校</caption>
-<tr>
-<th>ホームページ</th>
-<td><a href="https://www.soja.okayama-c.ed.jp/">ホームページはこちら</a></td>
-</tr>
-<tr>
-<th>所在地</th>
-<td>
-<img src="images/sojaHighSchool.jpg" width="800" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-</td>
-</tr>
-<tr>
-<th>電話番号</th>
-<td>(0866)93-0891</td>
-</tr>
-</table>
+            <section id="about">
+                <h2>概要</h2>
+                <ul>
+                    <li>家政科、普通科からなる105年の歴史を持つ高校。</li>
+                    <li>スローガンは『伝統校としての「品格」と「変革」』</li>
+                </ul>
+                
+                <h2>渡邊について</h2>
+                <ul>
+                    <li>元バトミントン部。同じ学年の人たちが問題を起こしまくり、身の危険を感じてやめた。</li>
+                    <li>卒業生の口コミで現代のバスティーユ牢獄と言われる学校。</li>
+                </ul>
+                <br>
 
-</section>
+                <!--おみくじ-->
+                <button id="omikuji" class="btn btn--orange btn--radius">おみくじぼたん</button>
+                <div class="dialog-overlay" id="dialog-overlay">
+                    <div class="dialog" id="dialog">
+                        <p id="omikuji-result"></p>
+                        <button onclick="closeDialog()">閉じる</button>
+                    </div>
+                </div>
 
-<section id="about">
-<ul>
-<h2>概要<h2>
-</ul>
-<li>家政科、普通科からなる105年の歴史を持つ高校。</li>
-<li>スローガンは『伝統校としての「品格」と「変革」』</li>
+            </section>
+        </main>
 
-<ul>
-    <h2>渡邊について<h2>
-</ul>
-<li>元バトミントン部。同じ学年の人たちが問題を起こしまくり、身の危険を感じてやめた。</li>
-<li>卒業生の口コミに現代のバスティーユ牢獄と言われる学校。</li>
+        <!--footerここから-->
+        <footer>
+            <small>Copyright&copy; <a href="index.html">team-2</a> All Rights Reserved.</small>
+            <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+        </footer>
 
+    </div>
+    <!--/#container-->
 
+    <!--jQueryファイルの読み込み-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-<button id="omikuji">おみくじぼたん</button>
+    <!--ページの上部へ戻るボタンとスクリプト-->
+    <p class="pagetop"><a href="#">↑</a></p>
+    <!--<script src="js/openclose_tp.js"></script>-->
 
-
-</section>
-
-
-
-
-</main>
-
-<footer>
-
-<small>Copyright&copy; <a href="index.html">team-2</a> All Rights Reserved.</small>
-<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
-</footer>
-
-</div>
-<!--/#container-->
-
-<!--jQueryファイルの読み込み-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<!--ページの上部へ戻るボタンとスクリプト-->
-<p class="pagetop"><a href="#">↑</a></p>
-<!--<script src="js/openclose_tp.js"></script>-->
-
-<script src="assets/js/js_sojaHighschool.js"></script>
+    <script src="assets/js/js_sojaHighschool.js"></script>
 </body>
 </html>
