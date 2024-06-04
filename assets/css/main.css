@@ -375,6 +375,7 @@ main {
     border: none;
     border-radius: 5px;
 	border-bottom: 5px solid #9b8d69;
+	margin-right: 20px;
 }.button:hover {
 	margin-top: 3px;
 	color: #9b8d69;
