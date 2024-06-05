@@ -7,8 +7,9 @@
 <meta name="description" content="母校の紹介ホーム">
 <link rel="stylesheet" href="assets/css/main.css">
 
-<!--▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼おみくじ機能用のスタイル by坂本▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
+
 <style>
+    /*おみくじ機能用のスタイル by坂本*/
     .btn {
         font-size: 1rem;
         width: 12rem;
@@ -48,8 +49,32 @@
         width: 300px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
+     /*時計 by牧野*/
+    .clock{
+        color: #0a0a0a;
+        font-size: 30px;
+        text-align: left; 
+    }
 </style>
-<!--▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲おみくじ機能用のスタイル by坂本▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲-->
+
+<script>
+    function set2fig(num) {
+        // 2桁に調整
+        var ret;
+        if( num < 10 ) { ret = "0" + num; }
+        else { ret = num; }
+        return ret;
+    }
+    function showClock2() {
+        var nowTime = new Date();
+        var nowHour = set2fig( nowTime.getHours() );
+        var nowMin  = set2fig( nowTime.getMinutes() );
+        var nowSec  = set2fig( nowTime.getSeconds() );
+        var msg = nowHour + ":" + nowMin + ":" + nowSec;
+        document.getElementById("RealtimeClockArea2").innerHTML = msg;
+    }
+    setInterval('showClock2()',1000);
+</script>
 </head>
 
 <body>
@@ -109,6 +134,11 @@
         </div>
     </div>
     <script src="assets/js/js_sojaHighschool.js"></script>
+</tr>
+<tr>
+    <td>時計</td>
+    <td></td>
+    <td><p class="clock" id="RealtimeClockArea2"></p></td>
 </tr>
 </table>
 </section>
