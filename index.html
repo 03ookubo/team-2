@@ -2,10 +2,53 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>チーム2母校紹介 tp_beginner7</title>
+<title>チーム2母校紹介</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="母校の紹介">
+<meta name="description" content="母校の紹介ホーム">
 <link rel="stylesheet" href="assets/css/main.css">
+<!--▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼おみくじ機能用のスタイル by坂本▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼-->
+<style>
+    .btn {
+        font-size: 1rem;
+        width: 12rem;
+        height: 2.5rem; 
+    }
+
+    .btn--orange {
+        color: #fff;
+        background-color: #ffb86c;
+    }
+
+    .btn--orange:hover {
+        color: #fff;
+        background: #ffb86c;
+    }
+
+    .btn--radius {
+        border-radius: 100vh;
+    }
+
+    .dialog-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .dialog {
+        background-color: white;
+        border: 1px solid black;
+        padding: 20px;
+        width: 300px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+</style>
+<!--▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲おみくじ機能用のスタイル by坂本▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲-->
 </head>
 
 <body>
@@ -20,53 +63,52 @@
 <nav id="menubar">
 <ul>
 <li><a href="index.html">HOME</a></li>
-<li><a href="school_ookubo.html">大久保</a></li>
-<li><a href="service.html">渡邊</a></li>
-<li><a href="contact.html">牧野</a></li>
-<li><a href="contact.html">坂本</a></li>
+<li><a href="school_higashiokayamaHighSchool.html">大久保</a></li>
+<li><a href="school_sojaHighschool.html">渡邊</a></li>
+<li><a href="school_minamihighschool.html">牧野</a></li>
+<li><a href="school_kasasyouHighSchool.html">坂本</a></li>
 </ul>
 </nav>
 
 <!--スライドショー（slick）-->
-<div class="mainimg">
-<div><img src="images/kasashou.jpg" alt=""></div>
-<div><img src="images/2.jpg" alt=""></div>
-<div><img src="images/3.jpg" alt=""></div>
+<div id ="slideshow"class="slide">
+<div><img class="slide" src="images/kasashou.jpg" alt=""style="display:none"></div>
+<div><img class="slide" src="images/higashiokayama.jpg" alt=""style="display:none"></div>
+<div><img class="slide" src="images/sojaHighSchool.jpg" alt=""style="display:none"></div>
 </div>
 
 <main>
 
 <section>
 
-<h2>テンプレートのご利用前に必ずお読み下さい</h2>
+<h2></h2>
 
-<h3>利用規約のご案内</h3>
-<p></p>
-<p><strong class="color-theme"></p>
-<p><strong class="color-theme"></strong><br></p>
 
-<h3></h3>
-<p><a href="company.html#about"></a></p>
 
 </section>
 
 <section>
-
-<h2>お知らせ</h2>
-
-<dl id="new">
-<dt>2021/12/11</dt>
-<dd>tp_beginner7配布開始。</dd>
-<dt>20XX/00/00</dt>
-<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-<dt>20XX/00/00</dt>
-<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-<dt>20XX/00/00</dt>
-<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-<dt>20XX/00/00</dt>
-<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-</dl>
-
+<table class="ta1">
+<tr>
+<td>押した数をカウントするボタン</td>
+<th id="clickCount">0</th>
+<td><button id="clickButton" class="button">クリック</button><button id="resetButton" class="button">リセット</button></td>
+<script src="assets/js/school_kasasyouHighSchool.js"></script>
+</tr>
+<tr>
+    <!--おみくじ-->
+    <td>おみくじをひくボタン</td>
+    <td></td>
+    <td><button id="omikuji" class="btn btn--orange btn--radius">おみくじぼたん</button></td>
+    <div class="dialog-overlay" id="dialog-overlay">
+        <div class="dialog" id="dialog">
+            <p id="omikuji-result"></p>
+            <button onclick="closeDialog()">閉じる</button>
+        </div>
+    </div>
+    <script src="assets/js/js_sojaHighschool.js"></script>
+</tr>
+</table>
 </section>
 
 </main>
@@ -78,18 +120,13 @@
 </footer>
 
 </div>
-<!--/#container-->
-
-<!--jQueryファイルの読み込み-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <!--スライドショー（slick）-->
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script src="js/slick.js"></script>
+<script src="assets/js/index.js"></script>
 
 <!--ページの上部へ戻るボタンとスクリプト-->
 <p class="pagetop"><a href="#">↑</a></p>
-<script src="js/openclose_tp.js"></script>
+<script src="assets/js/index.js"></script>
 
 </body>
 </html>
