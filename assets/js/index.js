@@ -6,7 +6,8 @@ setInterval(function() {
   slides[slideIndex].style.display = 'none';
   slideIndex = (slideIndex + 1) % slides.length;
   slides[slideIndex].style.display = 'block';
-}, 2000); // 2000ミリ秒（2秒）ごとに画像を切り替え
+}, 2000);
+ // 2000ミリ秒（2秒）ごとに画像を切り替え
 
 
 
@@ -59,4 +60,3 @@ $(function(){
             return false;
     });
 });
-
